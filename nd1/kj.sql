@@ -1,6 +1,5 @@
 INSERT INTO Authors (name) VALUES ('Kazys'), ('Jonaitis');
 INSERT INTO Books (authorId, title, year) VALUES (8, 'Pakeliu maniakas', 2013), (9, 'Knyga', 2013);
-FROM Books INNER JOIN Authors ON Books.authorId = Authors.authorId;
 UPDATE Books SET Books.authorId = 8 WHERE Books.authorId = 9;
 DELETE FROM Authors WHERE authorId IN(8, 9);
 DELETE FROM Books WHERE Books.authorId IS NULL;
